@@ -60,5 +60,3 @@ personal-website/
 
 ---
 
-
-*This project represents a professional portfolio showcasing web development skills and astrophotography expertise.*
