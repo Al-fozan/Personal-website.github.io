@@ -310,16 +310,39 @@ section h2 {
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 6px var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s ease;
 }
 
 .hobby-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px var(--shadow);
+    border-color: var(--primary-color);
+}
+
+.hobby-card:hover::before {
+    left: 100%;
 }
 
 .hobby-card:first-child:hover {
     transform: translateY(-5px) scale(1.02);
+    border-color: var(--accent-color);
+}
+
+.hobby-card:not(:first-child):hover {
     border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--background-color) 0%, rgba(59, 130, 246, 0.05) 100%);
 }
 
 .hobby-icon {
@@ -339,8 +362,8 @@ section h2 {
 }
 
 .hobby-icon-img {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     object-fit: contain;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
@@ -524,11 +547,10 @@ section h2 {
     text-align: center;
 }
 
-.social-icon-img {
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
-}
+.social-link:nth-child(1) i { color: #E4405F; }
+.social-link:nth-child(2) i { color: #1DA1F2; }
+.social-link:nth-child(3) i { color: #0077B5; }
+.social-link:nth-child(4) i { color: #FF0000; }
 
 /* Footer */
 .footer {
