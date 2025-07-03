@@ -29,17 +29,8 @@ class WebsiteController {
             langToggle.addEventListener('click', () => this.toggleLanguage());
         }
 
-        // Contact form
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => this.handleContactForm(e));
-        }
-
         // Smooth scrolling for navigation
         this.setupSmoothScrolling();
-
-        // Form input animations
-        this.setupFormAnimations();
     }
 
     // Toggle between Arabic and English
@@ -100,92 +91,6 @@ class WebsiteController {
         localStorage.setItem('preferred-language', this.currentLang);
     }
 
-    // Handle contact form submission
-    handleContactForm(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(e.target);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-
-        // Basic validation
-        if (!name || !email || !message) {
-            this.showNotification('يرجى ملء جميع الحقول / Please fill all fields', 'error');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            this.showNotification('يرجى إدخال بريد إلكتروني صحيح / Please enter a valid email', 'error');
-            return;
-        }
-
-        // Simulate form submission
-        this.showNotification('تم إرسال رسالتك بنجاح! / Message sent successfully!', 'success');
-        e.target.reset();
-    }
-
-    // Show notification
-    showNotification(message, type = 'info') {
-        // Remove existing notifications
-        const existingNotifications = document.querySelectorAll('.notification');
-        existingNotifications.forEach(notification => notification.remove());
-
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.textContent = message;
-        
-        // Style the notification
-        Object.assign(notification.style, {
-            position: 'fixed',
-            top: '100px',
-            right: '20px',
-            left: '20px',
-            maxWidth: '400px',
-            margin: '0 auto',
-            padding: '1rem 1.5rem',
-            borderRadius: '0.5rem',
-            color: 'white',
-            fontWeight: '500',
-            zIndex: '9999',
-            transform: 'translateY(-20px)',
-            opacity: '0',
-            transition: 'all 0.3s ease',
-            textAlign: 'center'
-        });
-
-        // Set background color based on type
-        switch (type) {
-            case 'success':
-                notification.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                break;
-            case 'error':
-                notification.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-                break;
-            default:
-                notification.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
-        }
-
-        // Add to document
-        document.body.appendChild(notification);
-
-        // Animate in
-        setTimeout(() => {
-            notification.style.transform = 'translateY(0)';
-            notification.style.opacity = '1';
-        }, 100);
-
-        // Remove after delay
-        setTimeout(() => {
-            notification.style.transform = 'translateY(-20px)';
-            notification.style.opacity = '0';
-            setTimeout(() => notification.remove(), 300);
-        }, 4000);
-    }
-
     // Setup smooth scrolling
     setupSmoothScrolling() {
         // Add smooth scrolling behavior to all internal links
@@ -200,29 +105,6 @@ class WebsiteController {
                     });
                 }
             });
-        });
-    }
-
-    // Setup form input animations
-    setupFormAnimations() {
-        const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
-        
-        inputs.forEach(input => {
-            // Handle focus and blur for floating labels
-            input.addEventListener('focus', () => {
-                input.parentElement.classList.add('focused');
-            });
-
-            input.addEventListener('blur', () => {
-                if (!input.value) {
-                    input.parentElement.classList.remove('focused');
-                }
-            });
-
-            // Check if input has value on page load
-            if (input.value) {
-                input.parentElement.classList.add('focused');
-            }
         });
     }
 }

@@ -445,64 +445,58 @@ section h2 {
     margin: 0 auto;
 }
 
-.contact-form {
+.contact-info {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.form-group {
-    position: relative;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--border-color);
-    border-radius: 0.5rem;
-    background: var(--background-color);
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     color: var(--text-primary);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    resize: vertical;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.form-group label {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
-    color: var(--text-secondary);
-    transition: all 0.3s ease;
-    pointer-events: none;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
     background: var(--background-color);
-    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:valid + label,
-.form-group textarea:valid + label {
-    top: -0.5rem;
-    font-size: 0.875rem;
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow);
+    border-color: var(--primary-color);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
     color: var(--primary-color);
+    width: 2rem;
+    text-align: center;
 }
 
-[dir="ltr"] .form-group label {
-    left: 1rem;
-    right: auto;
+.contact-details h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
 }
 
-.form-group textarea {
-    min-height: 120px;
+.contact-details a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
 }
 
 .social-links h3 {
