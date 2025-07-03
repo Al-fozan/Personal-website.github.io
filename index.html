@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد الفوزان - Mohammed Alfawzan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h3 data-ar="محمد الفوزان" data-en="Mohammed Alfawzan">محمد الفوزان</h3>
+            </div>
+            <div class="nav-controls">
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button id="langToggle" class="toggle-btn">
+                        <span class="toggle-option active" data-lang="ar">ع</span>
+                        <span class="toggle-option" data-lang="en">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 data-ar="مرحباً، أنا محمد الفوزان" data-en="Hello, I'm Mohammed Alfawzan">مرحباً، أنا محمد الفوزان</h1>
+                    <p data-ar="مرحباً بك في موقعي الشخصي. أنا شغوف بالتكنولوجيا والتصوير الفلكي واستكشاف الكون." data-en="Welcome to my personal website. I'm passionate about technology, astrophotography, and exploring the universe.">مرحباً بك في موقعي الشخصي. أنا شغوف بالتكنولوجيا والتصوير الفلكي واستكشاف الكون.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('hobbies')" data-ar="هواياتي" data-en="My Hobbies">هواياتي</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <img src="images/icons/homepageIcon.png" alt="Mohammed Alfawzan" class="profile-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2 data-ar="هواياتي" data-en="My Hobbies">هواياتي</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card" onclick="window.location.href='astrophotography.html'">
+                    <div class="hobby-icon">
+                        <img src="images/icons/astrophotographyIcon.png" alt="Astrophotography" class="hobby-icon-img">
+                    </div>
+                    <h3 data-ar="التصوير الفلكي" data-en="Astrophotography">التصوير الفلكي</h3>
+                    <p data-ar="استكشاف الكون من خلال عدسة الكاميرا" data-en="Exploring the universe through camera lens">استكشاف الكون من خلال عدسة الكاميرا</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-ar="البرمجة" data-en="Programming">البرمجة</h3>
+                    <p data-ar="بناء تطبيقات ومواقع ويب مبتكرة" data-en="Building innovative apps and websites">بناء تطبيقات ومواقع ويب مبتكرة</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 data-ar="التصوير الفوتوغرافي" data-en="Photography">التصوير الفوتوغرافي</h3>
+                    <p data-ar="التقاط اللحظات الجميلة والذكريات" data-en="Capturing beautiful moments and memories">التقاط اللحظات الجميلة والذكريات</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 data-ar="القراءة" data-en="Reading">القراءة</h3>
+                    <p data-ar="استكشاف عوالم جديدة من خلال الكتب" data-en="Exploring new worlds through books">استكشاف عوالم جديدة من خلال الكتب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 data-ar="الشهادات" data-en="Certificates">الشهادات</h2>
+            <div class="coming-soon">
+                <div class="coming-soon-content">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-ar="قريباً..." data-en="Coming Soon...">قريباً...</h3>
+                    <p data-ar="سيتم إضافة الشهادات قريباً" data-en="Certificates will be added soon">سيتم إضافة الشهادات قريباً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+            <p class="contact-intro" data-ar="سأكون سعيداً للغاية بالتواصل معك. لا تتردد في إرسال رسالة!" data-en="I'd be delighted to hear from you. Don't hesitate to send me a message!">سأكون سعيداً للغاية بالتواصل معك. لا تتردد في إرسال رسالة!</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</button>
+                </form>
+
+                <div class="social-links">
+                    <h3 data-ar="تابعني على" data-en="Follow Me">تابعني على</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/fozy__1/" target="_blank" class="social-link">
+                            <img src="images/social media logo/instalogo.png" alt="Instagram Logo" class="social-icon-img">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://x.com/AstroM7md" target="_blank" class="social-link">
+                            <img src="images/social media logo/x_logo.png" alt="X Logo" class="social-icon-img">
+                            <span>X (Twitter)</span>
+                        </a>
+                        <a href="https://github.com/Al-fozan" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-ar="© 2025 محمد الفوزان. جميع الحقوق محفوظة." data-en="© 2025 Mohammed Alfawzan. All rights reserved.">© 2025 محمد الفوزان. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التصوير الفلكي - محمد الفوزان</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="astrophotography.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="astro-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h3 data-ar="محمد الفوزان" data-en="Mohammed Alfawzan">محمد الفوزان</h3>
+                </a>
+            </div>
+            <div class="nav-controls">
+                <!-- Back to Home -->
+                <a href="index.html" class="back-home" data-ar="العودة للرئيسية" data-en="Back to Home">
+                    <i class="fas fa-home"></i>
+                    <span data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+                </a>
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button id="langToggle" class="toggle-btn">
+                        <span class="toggle-option active" data-lang="ar">ع</span>
+                        <span class="toggle-option" data-lang="en">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="astro-hero">
+        <div class="container">
+            <div class="astro-hero-content">
+                <h1 data-ar="التصوير الفلكي" data-en="Astrophotography">التصوير الفلكي</h1>
+                <p data-ar="رحلة عبر الكون من خلال عدسة الكاميرا" data-en="A journey through the universe through camera lens">رحلة عبر الكون من خلال عدسة الكاميرا</p>
+            </div>
+            <div class="stars-background"></div>
+        </div>
+    </section>
+
+    <!-- About the Hobby Section -->
+    <section class="about-hobby">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-ar="شغفي بالتصوير الفلكي" data-en="My Passion for Astrophotography">شغفي بالتصوير الفلكي</h2>
+                    <p data-ar="التصوير الفلكي ليس مجرد هواية بالنسبة لي، بل هو نافذة للتواصل مع الكون. منذ أن التقطت صورتي الأولى للقمر، أدركت أن هناك عالماً كاملاً من الجمال ينتظر أن يُكتشف في السماء المظلمة." data-en="Astrophotography isn't just a hobby for me; it's a window to connect with the universe. Since I captured my first moon photo, I realized there's a whole world of beauty waiting to be discovered in the dark sky.">التصوير الفلكي ليس مجرد هواية بالنسبة لي، بل هو نافذة للتواصل مع الكون. منذ أن التقطت صورتي الأولى للقمر، أدركت أن هناك عالماً كاملاً من الجمال ينتظر أن يُكتشف في السماء المظلمة.</p>
+                    
+                    <p data-ar="أستمتع بتصوير المجرات البعيدة، والسدم الملونة، والكواكب، والقمر في مراحله المختلفة. كل صورة تحكي قصة كونية مذهلة وتذكرني بمدى صغرنا في هذا الكون الشاسع." data-en="I enjoy capturing distant galaxies, colorful nebulae, planets, and the moon in its various phases. Each photo tells an amazing cosmic story and reminds me how small we are in this vast universe.">أستمتع بتصوير المجرات البعيدة، والسدم الملونة، والكواكب، والقمر في مراحله المختلفة. كل صورة تحكي قصة كونية مذهلة وتذكرني بمدى صغرنا في هذا الكون الشاسع.</p>
+                </div>
+                <div class="about-image">
+                    <div class="telescope-illustration">
+                        <img src="images/icons/AstrophotograpyHomeIcon.png" alt="Astrophotography Icon" class="astro-profile-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 data-ar="معرض الصور" data-en="Photo Gallery">معرض الصور</h2>
+            <div class="gallery-grid">
+                <!-- Your actual astrophotography images -->
+                <div class="gallery-item" onclick="openModal(1)">
+                    <div class="gallery-image">
+                        <img src="images/astrophotography/Fullmoon.png" alt="Full Moon" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 data-ar="القمر المكتمل" data-en="Full Moon">القمر المكتمل</h3>
+                        <!-- <p class="date" data-ar="التاريخ: 15 يناير 2024" data-en="Date: January 15, 2024">التاريخ: 15 يناير 2024</p> -->
+                        <p class="equipment" data-ar="المعدات: Canon EOS RP + SkyMax102 + Sky-watcher AZ-GTI mount" data-en="Equipment: Canon EOS RP + SkyMax102 + Sky-watcher AZ-GTI mount">المعدات: Canon EOS RP + SkyMax102 + Sky-watcher AZ-GTI mount</p>
+                        <p class="location" data-ar="الموقع: المطية، السعودية" data-en="Location: Al-moutayah, Saudi Arabia">الموقع: المطية، السعودية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(2)">
+                    <div class="gallery-image">
+                        <img src="images/astrophotography/orion belt 2025_2_1.jpg" alt="Orion Belt" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 data-ar="حزام الجبار" data-en="Orion Belt">حزام الجبار</h3>
+                        <!-- <p class="date" data-ar="التاريخ: 1 فبراير 2025" data-en="Date: February 1, 2025">التاريخ: 1 فبراير 2025</p> --> 
+                        <p class="equipment" data-ar="المعدات: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount" data-en="Equipment: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount">المعدات: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount</p>
+                        <p class="location" data-ar="الموقع: جبال قطن، السعودية" data-en="Location:  Qitan Mountains, Saudi Arabia">الموقع: جبال قطن، السعودية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(3)">
+                    <div class="gallery-image">
+                        <img src="images/astrophotography/milkywayt.png" alt="Milky Way" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 data-ar="مركز درب التبانة" data-en="Milky Way Core">مركز درب التبانة</h3>
+                        <!-- <p class="date" data-ar="التاريخ: 10 نوفمبر 2023" data-en="Date: November 10, 2023">التاريخ: 10 نوفمبر 2023</p> --> 
+                        <p class="equipment" data-ar="المعدات: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount" data-en="Equipment: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount">المعدات: Equipment: Canon EOS RP + Canon RF 24-105mm At 105mm + Sky-watcher AZ-GTI mount</p>
+                        <p class="location" data-ar="الموقع: المطية، السعودية" data-en="Location: Al-moutayah, Saudi Arabia">الموقع:المطية ,السعودية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(4)">
+                    <div class="gallery-image">
+                        <img src="images/astrophotography/andro3.3.png" alt="Andromeda Galaxy" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 data-ar="مجرة أندروميدا" data-en="Andromeda Galaxy">مجرة أندروميدا</h3>
+                        <!-- <p class="date" data-ar="التاريخ: 25 أكتوبر 2023" data-en="Date: October 25, 2023">التاريخ: 25 أكتوبر 2023</p> -->
+                        <p class="equipment" data-ar="المعدات:Canon EOS RP + Skywatcher StarTravel 102 + Sky-watcher AZ-GTI mount" data-en="Equipment: Canon EOS RP + Skywatcher StarTravel 102 + Sky-watcher AZ-GTI mount">المعدات: Canon EOS RP + Skywatcher StarTravel 102 + Sky-watcher AZ-GTI mount</p>
+                        <p class="location" data-ar="الموقع: المطية، السعودية" data-en="Location: Al-moutayah, Saudi Arabia">الموقع: المطية , السعودية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(5)">
+                    <div class="gallery-image">
+                        <img src="images/astrophotography/Rho_Ophiuchi Nebula.png" alt="Rho Ophiuchi Nebula" loading="lazy">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 data-ar="سديم رو الحواء" data-en="Rho Ophiuchi Nebula">سديم رو الحواء</h3>
+                        <p class="equipment" data-ar="المعدات: Canon EOS RP + Canon RF 24-105mm At 50mm + Sky-watcher AZ-GTI mount" data-en="Equipment: Canon EOS RP + Canon RF 24-105mm At 50mm + Sky-watcher AZ-GTI mount">المعدات: Canon EOS RP + Canon RF 24-105mm At 50mm + Sky-watcher AZ-GTI mount</p>
+                        <p class="location" data-ar="الموقع: المطية، السعودية" data-en="Location: Al-moutayah, Saudi Arabia">الموقع: المطية، السعودية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Astro Social Section -->
+    <section class="astro-social">
+        <div class="container">
+            <h2 data-ar="حساباتي في التصوير الفلكي" data-en="My Astrophotography Accounts">حساباتي في التصوير الفلكي</h2>
+            <div class="astro-social-links">
+                <a href="https://www.instagram.com/fozy__1/" target="_blank" class="astro-social-link">
+                    <div class="social-logo">
+                        <img src="images/social media logo/instalogo.png" alt="Instagram Logo">
+                    </div>
+                    <div class="link-info">
+                        <h3>@fozy__1</h3>
+                        <p data-ar="صور فلكية " data-en=" astro photos">صور فلكية</p>
+                    </div>
+                </a>
+                
+                <a href="https://x.com/AstroM7md" target="_blank" class="astro-social-link">
+                    <div class="social-logo">
+                        <img src="images/social media logo/x_logo.png" alt="X Logo">
+                    </div>
+                    <div class="link-info">
+                        <h3>@AstroM7md</h3>
+                        <p data-ar="تحديثات ومشاركات فلكية" data-en="Astro updates and posts">تحديثات ومشاركات فلكية</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.tiktok.com/@astrom7md" target="_blank" class="astro-social-link">
+                    <div class="social-logo">
+                        <img src="images/social media logo/toktok_logo.png" alt="TikTok Logo">
+                    </div>
+                    <div class="link-info">
+                        <h3>@astrom7md</h3>
+                        <p data-ar="فيديوهات قصيرة عن التصوير الفلكي" data-en="Short astrophotography videos">فيديوهات قصيرة عن التصوير الفلكي</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Full-Size Images -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content fullscreen">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-instructions" id="modalInstructions">
+                <span data-ar="استخدم العجلة للتكبير والتصغير • اسحب لتحريك الصورة • الأسهم للتنقل • Esc للإغلاق" data-en="Scroll to zoom • Drag to pan • Use arrows to navigate • Esc to close">استخدم العجلة للتكبير والتصغير • اسحب لتحريك الصورة • الأسهم للتنقل • Esc للإغلاق</span>
+            </div>
+            <div class="modal-image fullscreen-image">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-info fullscreen-info">
+                <h3 id="modalTitle">Image Title</h3>
+                <p id="modalEquipment">Equipment</p>
+                <p id="modalLocation">Location</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-ar="© 2025 محمد الفوزان. جميع الحقوق محفوظة." data-en="© 2025 Mohammed Alfawzan. All rights reserved.">© 2025 محمد الفوزان. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="astrophotography.js"></script>
+</body>
+</html>
